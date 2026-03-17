@@ -1,10 +1,28 @@
-# 23FE10CSE00478 GitLab
+# DevOps RAG
 
-This project demonstrates basic Git operations, branching, merging, and GitFlow workflow for the CSE3253 course.
+A complete, locally-hosted DevOps RAG chatbot.
 
-## Project Overview
-- Git repository management
-- Branch management and workflows
-- Conflict resolution
-- GitFlow implementation
-- Collaborative development practices
+## SETUP & RUN
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Configure environment:
+   cp .env.example .env
+   # Open .env and set your GOOGLE_API_KEY
+
+3. Test without API calls:
+   python ingest.py --dry-run
+
+4. Ingest local files only (cheapest first test):
+   python ingest.py --local-only
+
+5. Full ingestion (all DevOps domains):
+   python ingest.py
+
+6. Launch the chatbot:
+   streamlit run ui/app.py
+   # Opens at http://localhost:8501
+
+7. Rebuild index from scratch:
+   python ingest.py --rebuild
