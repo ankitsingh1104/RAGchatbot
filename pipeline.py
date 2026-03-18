@@ -81,4 +81,4 @@ if __name__ == "__main__":
     ai = ConsciousLLM()  # initialize model
 
     print(ai.respond("Explain AI"))  # generate response
-    print(ai.respond("What is life?"))  # another response
+    print(ai.respond("hello"))  # another response
